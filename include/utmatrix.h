@@ -62,6 +62,9 @@ public:
 template <class ValType>
 TVector<ValType>::TVector(int s, int si)
 {
+	Size = s;
+	StartIndex = si;
+	pvector = new ValType[s];
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> //конструктор копирования
@@ -69,7 +72,7 @@ TVector<ValType>::TVector(const TVector<ValType> &v)
 {
 } /*-------------------------------------------------------------------------*/
 
-template <class ValType>
+template <class ValType> //деструктор
 TVector<ValType>::~TVector()
 {
 } /*-------------------------------------------------------------------------*/
