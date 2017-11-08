@@ -102,7 +102,7 @@ bool TVector<ValType>::operator==(const TVector &v) const
 {
 	if ((Size != v.Size) || (StartIndex != v.StartIndex))
 		return false;
-	for (int i = StartIndex; i < Size; i++)
+	for (int i = 0; i < Size; i++)
 		if (pVector[i] != v.pVector[i])
 			return false;
 	return true;
